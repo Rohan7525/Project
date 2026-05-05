@@ -1,0 +1,1111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Gilroy", sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+#main {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0.1px;
+  background-color: #f8f8f8;
+}
+
+#nav {
+  height: 12vh;
+  width: 100%;
+  margin-top: 40px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+
+#nav h2 {
+  /* background-color: blue; */
+  height: 100%;
+  width: 22%;
+  font-size: 1.1vw;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid black;
+}
+
+#nav h1 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 0px;
+  font-size: 2.5vw;
+  letter-spacing: -1px;
+  position: relative;
+  font-family: "Monument Extended Bold";
+  text-shadow: 2px 3px 2px #0000003f;
+  /* background-color: red; */
+}
+
+#nav h1::after {
+  content: "©";
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  color: #666;
+  text-shadow: 0px 0px 0px #0000003f;
+}
+
+#nav h1::before {
+  content: "model management";
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #666;
+  font-size: 0.9vw;
+  position: absolute;
+  top: 63%;
+  right: 20%;
+  text-shadow: 0px 0px 0px #0000003f;
+}
+
+#nav h2:nth-last-child(1) {
+  width: 10%;
+  border: 0px;
+}
+
+#nav h3 {
+  display: none;
+}
+
+#center {
+  height: 90%;
+  width: 100%;
+  padding: 4vw;
+  position: relative;
+  /* background-color: red; */
+}
+
+#content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* background-color: blue; */
+}
+
+#content video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2% 2% 0% 0%;
+}
+
+#overlay {
+  height: 52%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 3vw;
+  color: white;
+  /* background-color: red; */
+}
+
+#over1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2vw;
+}
+
+#over1 h1 {
+  border-right: 0px;
+  font-size: 3.6vw;
+  mix-blend-mode: difference;
+  font-family: "Monument Extended Bold";
+  /* background-color: blue; */
+}
+
+#over1 h2 {
+  font-size: 1vw;
+  padding: 1.1vw 1.2vw;
+  border-radius: 50%;
+  border: 1px solid white;
+  /* background-color: blue; */
+}
+
+#over2 {
+  padding: 1.5vw 0;
+  border-top: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#over2 h4 {
+  font-size: 1.2vw;
+  font-weight: 900;
+}
+
+#over2 img {
+  height: 3vw;
+  rotate: 90deg;
+}
+
+#scroll {
+  width: 100%;
+  height: 40vh;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* background-color: red; */
+}
+
+#container {
+  height: 100%;
+  width: 110%;
+  padding: 2vw;
+  display: inline-block;
+  animation-name: move;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  /* background-color: blue; */
+}
+
+#scroll img {
+  /* display: none; */
+  border-radius: 50%;
+  height: 95%;
+  width: 15%;
+  margin: 1vw;
+  object-fit: cover;
+  object-position: center; /*30% 30%*/
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#alphabet {
+  height: 12vh;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+#alphabet h5 {
+  font-size: 1.4vw;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-right: 1.2vw;
+  border-bottom: 2px solid black;
+}
+
+#alphabet h6 {
+  font-size: 1vw;
+  font-weight: 400;
+  padding: 0.5vw 0.7vw;
+  font-style: italic;
+  letter-spacing: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0);
+  text-transform: uppercase;
+  transition: all ease 0.5s;
+}
+
+#alphabet h6:hover {
+  border: 1px solid black;
+}
+
+#page2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw 5vw;
+}
+
+#page2-part1 {
+  height: 100%;
+  width: 50%;
+  /* background-color: red; */
+}
+
+#page2-part1 h1 {
+  font-family: "Monument Extended Bold";
+  font-size: 2.2vw;
+  text-transform: uppercase;
+  margin-top: 1vw;
+  /* background-color: red; */
+}
+
+#page2-part1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 10% 20%;
+  border-radius: 0% 10%;
+  /* background-color: blue; */
+}
+
+#page2-part2 {
+  height: 100%;
+  width: 46%;
+  /* background-color: blue; */
+}
+
+#page2-part2 img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10% 0%;
+  object-position: 20% 10%;
+}
+
+#text {
+  /* background-color: red; */
+  padding: 0 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#text h3 {
+  height: 100%;
+  width: 50%;
+  margin-top: 1vw;
+  font-size: 1.4vw;
+  font-weight: 700;
+  color: #333;
+}
+
+#text h4 {
+  height: 100%;
+  width: 45%;
+  font-size: 0.9vw;
+  font-weight: 600;
+  color: #666;
+}
+
+#page3 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  background-color: white;
+}
+
+#page3-part1 {
+  height: 90%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: blue; */
+}
+
+#icon {
+  height: 40%;
+  width: 100%;
+  margin: 5vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: cyan; */
+}
+
+#icon img {
+  height: 80%;
+  width: 50%;
+}
+
+#text1 {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  /* background-color: yellow; */
+}
+
+#text1 h3 {
+  font-size: 1.4vw;
+}
+
+#text1 span {
+  color: #333;
+}
+
+#page3-part2 {
+  height: 90%;
+  width: 45%;
+  /* background-color: yellow; */
+}
+
+#page3-part2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 3px 3px 2px #0000003f;
+  border-radius: 0% 10%;
+  object-position: center;
+}
+
+#page4 {
+  height: 100%;
+  width: 100%;
+  padding: 5vw 4vw;
+  /* background-color: red; */
+}
+
+#page4 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 17% 0%;
+  object-position: center;
+}
+
+#page5 {
+  height: 85%;
+  width: 100%;
+  position: relative;
+  padding: 1vw 4vw;
+  /* background-color: red; */
+}
+
+#page5 > h1 {
+  text-align: center;
+  font-family: "Monument Extended Bold";
+  text-transform: uppercase;
+  font-size: 3vw;
+  margin-bottom: 7vh;
+  letter-spacing: 4px;
+  text-shadow: 2px 3px 2px #0000003f;
+}
+
+.elem {
+  height: 15vh;
+  width: 100%;
+  padding: 0 2vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid black;
+  /* background-color: red; */
+}
+
+.elem img {
+  height: 140px;
+  width: 140px;
+  position: absolute;
+  object-fit: cover;
+  object-position: 20% 10%;
+  border-radius: 50%;
+  left: 20%;
+  opacity: 0;
+  transition: all linear 0.5s;
+}
+
+.elem:nth-child(2n) img {
+  left: 40%;
+}
+
+.elem h4 {
+  font-size: 1vw;
+  font-weight: 500;
+  padding: 0 4vw;
+  width: 6%;
+  text-transform: uppercase;
+  /* background-color: red; */
+}
+
+.elem .elem-part2 {
+  width: 45%;
+  /* background-color: red; */
+}
+
+.elem-part2 h1 {
+  font-size: 2vw;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.elem-part2 h5 {
+  font-size: 0.8vw;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.elem:nth-last-child(1) {
+  border-bottom: 2px solid black;
+}
+
+.elem:hover img {
+  opacity: 1;
+  left: 28%;
+}
+
+#page6 {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4vw;
+  gap: 3vw;
+  /* background-color: red; */
+}
+
+#page6-part1 {
+  height: 80%;
+  width: 40%;
+  /* background-color: blue; */
+}
+
+#page6-part1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10% 10%;
+  box-shadow: 3px 3px 2px #0000003f;
+}
+
+#page6-part2 {
+  height: 80%;
+  width: 50%;
+  /* background-color: yellow; */
+}
+
+#page6-part2 > h1 {
+  font-family: "Monument Extended Bold";
+  font-size: 2.5vw;
+  margin-bottom: 2.2vw;
+  text-transform: uppercase;
+  text-shadow: 2px 3px 2px #0000003f;
+  letter-spacing: 4px;
+  /* background-color: cyan; */
+}
+
+#page6-part2 > h3 {
+  font-size: 1.3vw;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1vw;
+  /* background-color: cyan; */
+}
+
+#page6-part2 > h6 {
+  font-size: 0.9vw;
+  color: #666;
+  font-weight: 500;
+  line-height: 1.2vw;
+}
+
+#images {
+  height: 65%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1vw;
+  /* background-color: pink; */
+}
+
+#img-1 {
+  height: 70%;
+  width: 50%;
+  /* background-color: blue; */
+}
+
+#img-1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0% 20%;
+}
+
+#img-2 {
+  height: 70%;
+  width: 48%;
+  /* background-color: cyan; */
+}
+
+#img-2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20% 0%;
+  object-position: center;
+}
+
+#page7 {
+  height: 100%;
+  width: 100%;
+  padding: 5vw 4vw;
+  /* background-color: red; */
+}
+
+#page7 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 40% 10%;
+  border-radius: 0% 17%;
+}
+
+#page8 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw 5vw;
+  /* background-color: red; */
+}
+
+#page8-part1 {
+  height: 100%;
+  width: 50%;
+  /* background-color: blue; */
+}
+
+#page8-part1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10% 0%;
+  object-position: 10% 20%;
+  /* background-color: blue; */
+}
+
+#page8-part2 {
+  height: 100%;
+  width: 46%;
+  /* background-color: blue; */
+}
+
+#page8-part2 img {
+  height: 70%;
+  width: 100%;
+  border-radius: 0% 10%;
+  object-fit: cover;
+  object-position: 0% 20%;
+}
+
+#text2 {
+  /* background-color: red; */
+  padding: 0 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#text2 h3 {
+  height: 100%;
+  width: 50%;
+  margin-top: 2vw;
+  font-size: 1.7vw;
+  font-weight: 700;
+  color: #333;
+}
+
+#text2 h5 {
+  height: 100%;
+  width: 55%;
+  margin-top: 5vw;
+  line-height: 1.3vw;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #666;
+}
+
+#marque {
+  /* height: 20vh; */
+  margin-top: 3.5vw;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 1vw;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  /* background-color: red; */
+}
+
+#marque h1 {
+  display: inline-block;
+  font-size: 3vw;
+  font-weight: 900;
+  color: transparent;
+  margin-right: 16px;
+  letter-spacing: 3px;
+  -webkit-text-stroke: 2px black;
+  text-transform: uppercase;
+  font-family: "Monument Extended Bold";
+  animation-name: move1;
+  animation-duration: 4.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}
+
+@keyframes move1 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+#page9 {
+  height: 80%;
+  width: 100%;
+  gap: 1vw;
+  margin-top: 2vw 0;
+  padding: 2vw 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+
+#page9-part1 {
+  height: 100%;
+  width: 20%;
+  padding: 5vw 0;
+  /* background-color: blue; */
+}
+
+#page9-part1 h1 {
+  font-family: "Monument Extended Bold";
+  text-transform: uppercase;
+  font-size: 3vw;
+  text-shadow: 2px 3px 2px #0000003f;
+  letter-spacing: 2px;
+}
+
+#page9-part2 {
+  height: 100%;
+  width: 35%;
+  /* background-color: yellow; */
+}
+
+#page9-part2 h3 {
+  font-size: 1.3vw;
+  padding: 2vw 0;
+  font-weight: 600;
+  margin-bottom: 5vw;
+  line-height: 1.5vw;
+}
+
+#page9-part2 span {
+  font-size: 1vw;
+  font-weight: 500;
+  color: #333;
+  padding: 0.2vw 0.5vw;
+  border-radius: 50% 50%;
+  border: 2px solid black;
+  /* background-color: cyan; */
+}
+
+#page9-part2 img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0% 10%;
+  /* background-color: pink; */
+}
+
+#page9-part3 {
+  height: 100%;
+  width: 35%;
+  /* background-color: cyan; */
+}
+
+#page9-part3 h3 {
+  font-size: 1.3vw;
+  padding: 2vw 0;
+  font-weight: 600;
+  margin-bottom: 5vw;
+  line-height: 1.5vw;
+}
+
+#page9-part3 span {
+  font-size: 1vw;
+  font-weight: 500;
+  color: #333;
+  padding: 0.2vw 0.5vw;
+  border-radius: 50% 50%;
+  border: 2px solid black;
+  /* background-color: cyan; */
+}
+
+#page9-part3 img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10% 0%;
+  object-position: center;
+  /* background-color: pink; */
+}
+
+#footer {
+  height: 15%;
+  width: 100%;
+  /* background-color: red; */
+}
+
+#footer #nav h2 {
+  gap: 0.5vw;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #nav {
+    height: 8vh;
+    padding: 0 5vw;
+    margin-top: 20px;
+  }
+
+  #nav h2 {
+    display: none;
+  }
+
+  #nav h3 {
+    display: block;
+  }
+
+  #nav h1 {
+    width: 40%;
+    justify-content: flex-start;
+    font-size: 4vw;
+    letter-spacing: 3px;
+  }
+
+  #nav h1::after {
+    display: none;
+  }
+
+  #nav h1::before {
+    display: none;
+  }
+
+  #center {
+    height: 40%;
+  }
+
+  #overlay {
+    height: fit-content;
+  }
+
+  #over1 h1 {
+    font-size: 4.2vw;
+    font-weight: 100;
+    letter-spacing: 0.3vw;
+  }
+
+  #over1 h2 {
+    padding: 2vw 2vw;
+  }
+
+  #over2 h4 {
+    font-size: 2.2vw;
+  }
+
+  #over2 img {
+    height: 4.5vw;
+  }
+
+  #scroll {
+    height: 13vh;
+  }
+
+  #scroll img {
+    margin: 0.5vw 1vw;
+  }
+
+  #alphabet {
+    height: 5vh;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    gap: 0.2vw;
+  }
+
+  #alphabet h5 {
+    font-size: 1.4vw;
+    font-weight: 400;
+    margin-right: 0.5vw;
+    border-bottom: 1px solid black;
+  }
+
+  #alphabet h6 {
+    font-size: 1.2vw;
+    font-weight: 200;
+    letter-spacing: 0px;
+  }
+
+  #alphabet h6:hover {
+    border: 1px solid black;
+  }
+
+  #page2 {
+    height: 40%;
+  }
+
+  #page2-part1 h1 {
+    font-size: 3vw;
+    margin-top: 0.5vw;
+  }
+
+  #text {
+    padding: 0vw;
+  }
+
+  #text h3 {
+    font-size: 2vw;
+    font-weight: 600;
+    margin-top: 1.2vw;
+  }
+
+  #text h4 {
+    margin-top: 1.2vw;
+    font-weight: 500;
+    line-height: 1.7vw;
+    font-size: 1.3vw;
+  }
+
+  #page3 {
+    height: 50%;
+  }
+
+  #page3-part1 {
+    height: 70%;
+  }
+
+  #text1 h3 {
+    font-size: 1.7vw;
+  }
+
+  #text1 span {
+    font-size: 1.6vw;
+  }
+
+  #page3-part2 {
+    height: 85%;
+    width: 50%;
+  }
+
+  #page3-part2 img {
+    object-position: 30% 10%;
+  }
+
+  #page4 {
+    height: 40%;
+    padding: 2vw 5vw;
+  }
+
+  #page5 {
+    height: fit-content;
+  }
+
+  #page5 > h1 {
+    font-size: 4vw;
+    margin: 2vh 0;
+  }
+
+  .elem {
+    height: 8vh;
+  }
+
+  .elem img {
+    opacity: 1;
+    height: 50px;
+    width: 50px;
+    left: 30%;
+  }
+
+  .elem:nth-child(2n) img {
+    left: 30%;
+  }
+
+  .elem h4 {
+    font-size: 1.4vw;
+  }
+
+  .elem-part2 h1 {
+    font-size: 2.5vw;
+    font-weight: 600;
+  }
+
+  .elem-part2 h5 {
+    font-size: 1.3vw;
+    font-weight: 500;
+  }
+
+  #page6 {
+    height: 50%;
+    padding: 0 2vw;
+  }
+
+  #page6-part2 > h1 {
+    font-size: 3vw;
+    margin-bottom: 5vw;
+    letter-spacing: 2px;
+  }
+
+  #page6-part2 > h3 {
+    font-size: 2vw;
+    font-weight: 500;
+    margin-bottom: 2vw;
+  }
+
+  #page6-part2 > h6 {
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+  }
+
+  #page7 {
+    height: 40%;
+    padding: 2vw 5vw;
+  }
+
+  #page8 {
+    height: 40%;
+    padding: 1vw 4vw;
+  }
+
+  #text2 {
+    padding: 0vw;
+  }
+
+  #text2 h3 {
+    margin-top: 1.2vw;
+    font-size: 2vw;
+    font-weight: 600;
+  }
+
+  #text2 h5 {
+    margin-top: 2vw;
+    line-height: 1.7vw;
+    font-size: 1.3vw;
+    font-weight: 500;
+  }
+
+  #marque {
+    padding: 2vw;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  #marque h1 {
+    font-size: 5vw;
+    font-weight: 900;
+    font-family: "Gilroy", sans-serif;
+  }
+
+  #page9 {
+    height: 50%;
+    gap: 0.5vw;
+  }
+
+  #page9-part1 h1 {
+    font-size: 3.5vw;
+    letter-spacing: 3px;
+  }
+
+  #page9-part2 h3 {
+    font-size: 2vw;
+    font-weight: 500;
+    line-height: 2.2vw;
+  }
+
+  #page9-part2 span {
+    font-size: 1.5vw;
+    border: 1px solid #666;
+  }
+
+  #page9-part2 img {
+    height: 40%;
+  }
+
+  #page9-part3 h3 {
+    font-size: 2vw;
+    font-weight: 500;
+    line-height: 2.2vw;
+  }
+
+  #page9-part3 span {
+    font-size: 1.5vw;
+    border: 1px solid #666;
+  }
+
+  #page9-part3 img {
+    height: 40%;
+  }
+
+  #footer {
+    height: 10%;
+    width: 100%;
+    /* background-color: red; */
+  }
+
+  #footer #nav h2 {
+    gap: 0.5vw;
+  }
+
+  #footer #contact{
+    font-size: 2.4vw;
+    font-weight: 500;
+    /* background-color: red; */
+  }
+
+  #footer #footerHeading{
+    font-size: 4vw;
+    /* background-color: red; */
+  }
+}
